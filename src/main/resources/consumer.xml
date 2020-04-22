@@ -13,5 +13,5 @@
 
     <dubbo:reference id="providerService"
                      interface="com.notebook.dubbo_test.service.ProviderService"
-                     url="dubbo://172.16.113.141:20880/com.notebook.dubbo_test.service.ProviderService"/>
+                     url="dubbo://172.16.108.190:20880/com.notebook.dubbo_test.service.ProviderService"/>
 </beans>
