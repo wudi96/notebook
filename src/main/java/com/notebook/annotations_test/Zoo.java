@@ -23,7 +23,7 @@ public class Zoo {
             System.out.println(name);
             Class<?> aClass = null;
             try {
-                aClass = Class.forName("notebook.annotations_test.animal." + name.replace(".java", ""));
+                aClass = Class.forName("com.notebook.annotations_test.animal." + name.replace(".java", ""));
             } catch (ClassNotFoundException e) {
                 System.out.println(e.getMessage());
             }
