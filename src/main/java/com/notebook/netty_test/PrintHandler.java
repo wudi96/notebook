@@ -16,6 +16,7 @@ public class PrintHandler extends ChannelInboundHandlerAdapter {
   @Override
   public void channelRead(ChannelHandlerContext ctx, Object msg) {
     System.out.println("1");
+    System.out.println("msg:" + msg);
     ctx.fireChannelRead(msg);
   }
 }
