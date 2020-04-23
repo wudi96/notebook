@@ -9,7 +9,7 @@ import java.net.InetSocketAddress;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by luorigong on 2020-04-22.
+ * @author luorigong.
  */
 @Component
 public class HttpServer {

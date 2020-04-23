@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 import static com.notebook.netty_test.PrintHandler.SHARE;
 
 /**
- * @author tusu.
+ * @author luorigong.
  */
 @Component
 public class HttpServerInitializer extends ChannelInitializer<Channel> {
@@ -19,6 +19,7 @@ public class HttpServerInitializer extends ChannelInitializer<Channel> {
     protected void initChannel(Channel ch) {
         ch.pipeline()
                 .addLast(new IdleStateHandler(10, 0, 0, TimeUnit.SECONDS))
-                .addLast(PrintHandler.SHARE);
+                .addLast(PrintHandler.SHARE)
+                .addLast(PrintHandlerTwo.SHARE);
     }
 }

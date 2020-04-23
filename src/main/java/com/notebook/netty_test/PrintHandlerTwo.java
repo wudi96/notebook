@@ -6,23 +6,17 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
 /**
- * @author luorigong.
+ * @author luorigong
  */
 @Sharable
-public class PrintHandler extends ChannelInboundHandlerAdapter {
+public class PrintHandlerTwo extends ChannelInboundHandlerAdapter {
 
-  static ChannelHandler SHARE = new PrintHandler();
+  static ChannelHandler SHARE = new PrintHandlerTwo();
 
   @Override
   public void channelRead(ChannelHandlerContext ctx, Object msg) {
-    System.out.println("1");
+    System.out.println("2");
     System.out.println("msg:" + msg);
-    if ("needNext".equals(msg)) {
-      //继续调用下一个channel
-      ctx.fireChannelRead(msg);
-    } else {
-      //终止
-      ctx.fireChannelReadComplete();
-    }
+    ctx.fireChannelRead(msg);
   }
 }
