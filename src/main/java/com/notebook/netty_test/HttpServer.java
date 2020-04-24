@@ -32,6 +32,7 @@ public class HttpServer {
           .localAddress(new InetSocketAddress(8080))
           .bind()
           .sync();
+      //在连接关闭之前保持等待
       f.channel().closeFuture().sync();
     } catch (Exception e) {
       e.printStackTrace();
