@@ -7,8 +7,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.concurrent.TimeUnit;
 
-import static com.notebook.netty_test.PrintHandler.SHARE;
-
 /**
  * @author luorigong.
  */
