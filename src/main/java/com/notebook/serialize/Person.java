@@ -12,7 +12,7 @@ import java.io.Serializable;
 @Getter
 @Setter
 @Accessors(chain = true)
-public class Person implements Serializable {
+class Person implements Serializable {
 
     private int age;
 
